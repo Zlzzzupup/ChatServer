@@ -1,3 +1,0 @@
-/root/zlz/chatserver/muduo_test/build/CMakeFiles/rebuild_cache.dir
-/root/zlz/chatserver/muduo_test/build/CMakeFiles/server_cmake.dir
-/root/zlz/chatserver/muduo_test/build/CMakeFiles/edit_cache.dir

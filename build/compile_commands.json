@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/root/zlz/chatserver/build/src/server",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -g -g -o CMakeFiles/ChatServer.dir/chatserver.cpp.o -c /root/zlz/chatserver/src/server/chatserver.cpp",
+  "file": "/root/zlz/chatserver/src/server/chatserver.cpp"
+},
+{
+  "directory": "/root/zlz/chatserver/build/src/server",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -g -g -o CMakeFiles/ChatServer.dir/main.cpp.o -c /root/zlz/chatserver/src/server/main.cpp",
+  "file": "/root/zlz/chatserver/src/server/main.cpp"
+}
+]

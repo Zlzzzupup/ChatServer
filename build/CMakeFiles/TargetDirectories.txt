@@ -1,0 +1,7 @@
+/root/zlz/chatserver/build/CMakeFiles/rebuild_cache.dir
+/root/zlz/chatserver/build/CMakeFiles/edit_cache.dir
+/root/zlz/chatserver/build/src/CMakeFiles/rebuild_cache.dir
+/root/zlz/chatserver/build/src/CMakeFiles/edit_cache.dir
+/root/zlz/chatserver/build/src/server/CMakeFiles/rebuild_cache.dir
+/root/zlz/chatserver/build/src/server/CMakeFiles/ChatServer.dir
+/root/zlz/chatserver/build/src/server/CMakeFiles/edit_cache.dir
