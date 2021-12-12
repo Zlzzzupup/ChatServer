@@ -216,4 +216,40 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/muduo/net/EventLoop.h /usr/include/c++/8/atomic \
  /usr/include/muduo/base/Mutex.h /usr/include/muduo/base/CurrentThread.h \
- /usr/include/muduo/net/TimerId.h
+ /usr/include/muduo/net/TimerId.h \
+ /root/zlz/chatserver/include/server/chatservice.hpp \
+ /usr/include/c++/8/unordered_map /usr/include/c++/8/bits/hashtable.h \
+ /usr/include/c++/8/bits/hashtable_policy.h \
+ /usr/include/c++/8/bits/unordered_map.h /usr/include/c++/8/mutex \
+ /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
+ /usr/include/c++/8/ctime /usr/include/c++/8/bits/parse_numbers.h \
+ /usr/include/c++/8/bits/std_mutex.h \
+ /root/zlz/chatserver/thirdparty/json.hpp /usr/include/c++/8/numeric \
+ /usr/include/c++/8/bits/stl_numeric.h /usr/include/c++/8/forward_list \
+ /usr/include/c++/8/bits/forward_list.h \
+ /usr/include/c++/8/bits/forward_list.tcc /usr/include/c++/8/valarray \
+ /usr/include/c++/8/cmath /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/8/bits/valarray_array.h \
+ /usr/include/c++/8/bits/valarray_array.tcc \
+ /usr/include/c++/8/bits/valarray_before.h \
+ /usr/include/c++/8/bits/slice_array.h \
+ /usr/include/c++/8/bits/valarray_after.h \
+ /usr/include/c++/8/bits/gslice.h /usr/include/c++/8/bits/gslice_array.h \
+ /usr/include/c++/8/bits/mask_array.h \
+ /usr/include/c++/8/bits/indirect_array.h /usr/include/c++/8/cassert \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/locale \
+ /usr/include/c++/8/bits/locale_facets_nonio.h \
+ /usr/include/c++/8/x86_64-redhat-linux/bits/time_members.h \
+ /usr/include/c++/8/x86_64-redhat-linux/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/8/bits/codecvt.h \
+ /usr/include/c++/8/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/8/bits/locale_conv.h \
+ /usr/include/c++/8/bits/quoted_string.h /usr/include/c++/8/sstream \
+ /usr/include/c++/8/bits/sstream.tcc \
+ /root/zlz/chatserver/include/server/usermodel.hpp \
+ /root/zlz/chatserver/include/server/user.hpp

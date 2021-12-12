@@ -1,5 +1,7 @@
 #include "chatserver.hpp"
+#include "chatservice.hpp"
 #include "json.hpp"
+
 #include <functional>
 #include <string>
 
@@ -51,5 +53,7 @@ void ChatServer::onMessage(const muduo::net::TcpConnectionPtr &conn,
 
     // 目的: 完成解耦网络模块的代码和业务模块的代码
     // 通过js["msgid"] 获取 -> 业务handler -> conn js time
-    
+    MsgHandler msgHandler = ChatService::getInstance()->getHandler(js["msgid"].get<int>());
+    // 回调消息绑定好的事件处理起，来执行相应的业务处理器
+    msgHandler(conn, js, time);
 }
