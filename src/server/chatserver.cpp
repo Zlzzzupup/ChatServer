@@ -37,6 +37,7 @@ void ChatServer::onConnection(const muduo::net::TcpConnectionPtr &conn)
     // 客户端断开连接
     if (!conn->connected())
     {
+        ChatService::getInstance()->clientCloseException(conn);
         conn->shutdown();
     }
 }

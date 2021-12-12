@@ -28,6 +28,10 @@ public:
     void login(const muduo::net::TcpConnectionPtr &conn, json &js, muduo::Timestamp time);
     // 处理注册业务
     void reg(const muduo::net::TcpConnectionPtr &conn, json &js, muduo::Timestamp time);
+    // 处理客户端异常退出
+    void clientCloseException(const muduo::net::TcpConnectionPtr &conn);
+
+
     // 获取消息对应的处理器
     MsgHandler getHandler(int msgid);
 

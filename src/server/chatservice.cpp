@@ -130,3 +130,30 @@ void ChatService::reg(const muduo::net::TcpConnectionPtr &conn, json &js, muduo:
         conn->send(response.dump());
     }
 }
+
+// 处理客户端异常退出
+void ChatService::clientCloseException(const muduo::net::TcpConnectionPtr &conn)
+{
+    User user;
+
+    {
+        lock_guard<mutex> lock(mConnMutex);
+        for (auto it = mUserConnMap.begin(); it != mUserConnMap.end(); it++)
+        {
+            if (it->second == conn)
+            {
+                // 从map表中删除用户的连接信息
+                user.setId(it->first);
+                mUserConnMap.erase(it);
+                break;
+            }
+        }
+    }
+
+    // 更新用户的状态信息
+    if (user.getId() != -1)
+    {
+        user.setState("offline");
+        mUserModel.updateState(user);
+    }
+}
