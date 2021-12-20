@@ -12,7 +12,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/zlz/chatserver/src/server/chatservice.cpp" "src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o.d"
   "/root/zlz/chatserver/src/server/db/db.cpp" "src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o.d"
   "/root/zlz/chatserver/src/server/main.cpp" "src/server/CMakeFiles/ChatServer.dir/main.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/main.cpp.o.d"
-  "/root/zlz/chatserver/src/server/usermodel.cpp" "src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/usermodel.cpp.o.d"
+  "/root/zlz/chatserver/src/server/model/friendmodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o.d"
+  "/root/zlz/chatserver/src/server/model/groupmodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o.d"
+  "/root/zlz/chatserver/src/server/model/offlinemsgmodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/offlinemsgmodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/offlinemsgmodel.cpp.o.d"
+  "/root/zlz/chatserver/src/server/model/usermodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o.d"
   )
 
 # Targets to which this target links.

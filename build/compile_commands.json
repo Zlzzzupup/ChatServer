@@ -1,27 +1,47 @@
 [
 {
   "directory": "/root/zlz/chatserver/build/src/server",
-  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/chatserver.cpp.o -c /root/zlz/chatserver/src/server/chatserver.cpp",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/chatserver.cpp.o -c /root/zlz/chatserver/src/server/chatserver.cpp",
   "file": "/root/zlz/chatserver/src/server/chatserver.cpp"
 },
 {
   "directory": "/root/zlz/chatserver/build/src/server",
-  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/chatservice.cpp.o -c /root/zlz/chatserver/src/server/chatservice.cpp",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/chatservice.cpp.o -c /root/zlz/chatserver/src/server/chatservice.cpp",
   "file": "/root/zlz/chatserver/src/server/chatservice.cpp"
 },
 {
   "directory": "/root/zlz/chatserver/build/src/server",
-  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/main.cpp.o -c /root/zlz/chatserver/src/server/main.cpp",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/main.cpp.o -c /root/zlz/chatserver/src/server/main.cpp",
   "file": "/root/zlz/chatserver/src/server/main.cpp"
 },
 {
   "directory": "/root/zlz/chatserver/build/src/server",
-  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/usermodel.cpp.o -c /root/zlz/chatserver/src/server/usermodel.cpp",
-  "file": "/root/zlz/chatserver/src/server/usermodel.cpp"
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/db/db.cpp.o -c /root/zlz/chatserver/src/server/db/db.cpp",
+  "file": "/root/zlz/chatserver/src/server/db/db.cpp"
 },
 {
   "directory": "/root/zlz/chatserver/build/src/server",
-  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/db/db.cpp.o -c /root/zlz/chatserver/src/server/db/db.cpp",
-  "file": "/root/zlz/chatserver/src/server/db/db.cpp"
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o -c /root/zlz/chatserver/src/server/model/friendmodel.cpp",
+  "file": "/root/zlz/chatserver/src/server/model/friendmodel.cpp"
+},
+{
+  "directory": "/root/zlz/chatserver/build/src/server",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o -c /root/zlz/chatserver/src/server/model/groupmodel.cpp",
+  "file": "/root/zlz/chatserver/src/server/model/groupmodel.cpp"
+},
+{
+  "directory": "/root/zlz/chatserver/build/src/server",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/model/offlinemsgmodel.cpp.o -c /root/zlz/chatserver/src/server/model/offlinemsgmodel.cpp",
+  "file": "/root/zlz/chatserver/src/server/model/offlinemsgmodel.cpp"
+},
+{
+  "directory": "/root/zlz/chatserver/build/src/server",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatServer.dir/model/usermodel.cpp.o -c /root/zlz/chatserver/src/server/model/usermodel.cpp",
+  "file": "/root/zlz/chatserver/src/server/model/usermodel.cpp"
+},
+{
+  "directory": "/root/zlz/chatserver/build/src/client",
+  "command": "/usr/bin/c++  -I/root/zlz/chatserver/include -I/root/zlz/chatserver/include/server -I/root/zlz/chatserver/include/server/db -I/root/zlz/chatserver/include/server/model -I/root/zlz/chatserver/thirdparty -g -g -o CMakeFiles/ChatClient.dir/main.cpp.o -c /root/zlz/chatserver/src/client/main.cpp",
+  "file": "/root/zlz/chatserver/src/client/main.cpp"
 }
 ]

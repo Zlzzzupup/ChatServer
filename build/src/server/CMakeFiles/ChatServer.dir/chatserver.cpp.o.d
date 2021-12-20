@@ -251,5 +251,10 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /usr/include/c++/8/bits/locale_conv.h \
  /usr/include/c++/8/bits/quoted_string.h /usr/include/c++/8/sstream \
  /usr/include/c++/8/bits/sstream.tcc \
- /root/zlz/chatserver/include/server/usermodel.hpp \
- /root/zlz/chatserver/include/server/user.hpp
+ /root/zlz/chatserver/include/server/model/usermodel.hpp \
+ /root/zlz/chatserver/include/server/model/user.hpp \
+ /root/zlz/chatserver/include/server/model/offlinemsgmodel.hpp \
+ /root/zlz/chatserver/include/server/model/friendmodel.hpp \
+ /root/zlz/chatserver/include/server/model/groupmodel.hpp \
+ /root/zlz/chatserver/include/server/model/group.hpp \
+ /root/zlz/chatserver/include/server/model/groupuser.hpp
