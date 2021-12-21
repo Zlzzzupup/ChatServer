@@ -13,6 +13,7 @@ ChatService *ChatService::getInstance()
 // 注册消息以及对应的handler回调操作
 ChatService::ChatService()
 {
+    // 用户业务相关事件处理函数回调
     mMsgHandlerMap.insert({LOGIN_MSG, std::bind(&ChatService::login, this, _1, _2, _3)});
     mMsgHandlerMap.insert({REG_MSG, std::bind(&ChatService::reg, this, _1, _2, _3)});
     mMsgHandlerMap.insert({ONE_CHAT_MSG, std::bind(&ChatService::oneChat, this, _1, _2, _3)});
@@ -21,6 +22,13 @@ ChatService::ChatService()
     mMsgHandlerMap.insert({ADD_GROUP_MSG, std::bind(&ChatService::addGroup, this, _1, _2, _3)});
     mMsgHandlerMap.insert({GROUP_CHAT_MSG, std::bind(&ChatService::groupChat, this, _1, _2, _3)});
     mMsgHandlerMap.insert({LOGINOUT_MSG, std::bind(&ChatService::loginout, this, _1, _2, _3)});
+
+    // 连接redis服务器
+    if (mRedis.connect())
+    {
+        // 设置上报消息回调函数
+        mRedis.init_notify_handler(std::bind(&ChatService::handlerRedisSubscribeMSG, this, _1, _2));
+    }
 }
 
 // 获取消息对应的处理器
@@ -71,6 +79,9 @@ void ChatService::login(const muduo::net::TcpConnectionPtr &conn, json &js, mudu
             // 登录成功，更新用户状态state offline -> online
             user.setState("online");
             mUserModel.updateState(user);
+
+            // 登录成功后向redis订阅channel（也就是id）
+            mRedis.subscribe(id);
 
             json respone;
             respone["msgid"] = LOGIN_MSG_ACK;
@@ -215,6 +226,9 @@ void ChatService::clientCloseException(const muduo::net::TcpConnectionPtr &conn)
         }
     }
 
+    // 用户注销，相当于就是下线，在redis中取消订阅通道 2021-12-21
+    mRedis.unsubscribe(user.getId());
+
     // 更新用户的状态信息
     if (user.getId() != -1)
     {
@@ -238,6 +252,14 @@ void ChatService::oneChat(const muduo::net::TcpConnectionPtr &conn, json &js, mu
             it->second->send(js.dump());
             return;
         }
+    }
+
+    // 查询toid是否在线，表示在线但是不在本台主机中用redis转发 2021-12-21
+    User user = mUserModel.query(toid);
+    if ("online" == user.getState())
+    {
+        mRedis.publish(toid, js.dump());
+        return;
     }
 
     // 对方不在线，转发离线消息
@@ -304,8 +326,17 @@ void ChatService::groupChat(const muduo::net::TcpConnectionPtr &conn, json &js, 
         }
         else
         {
-            // 存储离线消息
-            mOfflineMsgModel.insert(id, js.dump());
+            // 查询toid是否在线，表示在线但是不在本台主机中用redis转发 2021-12-21
+            User user = mUserModel.query(id);
+            if ("online" == user.getState())
+            {
+                mRedis.publish(id, js.dump());
+            }
+            else
+            {
+                // 存储离线消息
+                mOfflineMsgModel.insert(id, js.dump());
+            }
         }
     }
 }
@@ -324,7 +355,25 @@ void ChatService::loginout(const muduo::net::TcpConnectionPtr &conn, json &js, m
         }
     }
 
+    // 用户注销，相当于下线，在redis中取消订阅通道  2021-12-21
+    mRedis.unsubscribe(userid);
+
     // 更新用户信息
     User user(userid, "", "", "offline");
     mUserModel.updateState(user);
+}
+
+// 从redis消息队列中获取订阅的消息 2021-12-21
+// 消息就被转发连接所在的这台主机上来了
+void ChatService::handlerRedisSubscribeMSG(int userid, string msg)
+{
+    lock_guard<mutex> lock(mConnMutex);
+    auto it = mUserConnMap.find(userid);
+    if (it != mUserConnMap.end())
+    {
+        it->second->send(msg);
+        return ;
+    }
+
+    mOfflineMsgModel.insert(userid, msg);
 }

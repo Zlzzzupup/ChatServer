@@ -257,4 +257,8 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /root/zlz/chatserver/include/server/model/friendmodel.hpp \
  /root/zlz/chatserver/include/server/model/groupmodel.hpp \
  /root/zlz/chatserver/include/server/model/group.hpp \
- /root/zlz/chatserver/include/server/model/groupuser.hpp
+ /root/zlz/chatserver/include/server/model/groupuser.hpp \
+ /root/zlz/chatserver/include/server/redis/redis.hpp \
+ /usr/local/include/hiredis/hiredis.h /usr/local/include/hiredis/read.h \
+ /usr/include/sys/time.h /usr/local/include/hiredis/sds.h \
+ /usr/local/include/hiredis/alloc.h /usr/include/c++/8/thread

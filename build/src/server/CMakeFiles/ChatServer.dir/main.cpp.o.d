@@ -257,6 +257,10 @@ src/server/CMakeFiles/ChatServer.dir/main.cpp.o: \
  /root/zlz/chatserver/include/server/model/groupmodel.hpp \
  /root/zlz/chatserver/include/server/model/group.hpp \
  /root/zlz/chatserver/include/server/model/groupuser.hpp \
+ /root/zlz/chatserver/include/server/redis/redis.hpp \
+ /usr/local/include/hiredis/hiredis.h /usr/local/include/hiredis/read.h \
+ /usr/include/sys/time.h /usr/local/include/hiredis/sds.h \
+ /usr/local/include/hiredis/alloc.h /usr/include/c++/8/thread \
  /usr/include/c++/8/iostream /usr/include/signal.h \
  /usr/include/bits/signum.h /usr/include/bits/signum-generic.h \
  /usr/include/bits/types/sig_atomic_t.h \

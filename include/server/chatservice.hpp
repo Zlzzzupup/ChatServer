@@ -10,6 +10,7 @@
 #include "offlinemsgmodel.hpp"
 #include "friendmodel.hpp"
 #include "groupmodel.hpp"
+#include "redis.hpp"
 
 using namespace std;
 using namespace placeholders;
@@ -48,6 +49,9 @@ public:
     // 处理服务器异常退出
     void reset();
 
+    // redis订阅回调函数
+    void handlerRedisSubscribeMSG(int, string);
+
     // 获取消息对应的处理器
     MsgHandler getHandler(int msgid);
 
@@ -68,6 +72,9 @@ private:
     OfflineMsgModel mOfflineMsgModel;
     FriendModel mFriendModel;
     GroupModel mGroupModel;
+
+    // redis操作对象
+    Redis mRedis;    
 };
 
 #endif
